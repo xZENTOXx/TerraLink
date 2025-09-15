@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentaciones", "1. Presentaciones", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Servicios", "2. Servicios", "{D3CD3FFC-507E-47F3-9AA2-78F9C85EAFE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Nucleo", "3. Nucleo", "{CB4E6D19-2AA1-47C9-A527-1D12D3392BC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Pruebas Unitarias", "4. Pruebas Unitarias", "{35EC63F1-6850-403C-9E7A-042FA2A9C76C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_dominio", "lib_dominio\lib_dominio.csproj", "{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F31BDFDE-DA17-4202-B870-42AA8A7C5F26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F31BDFDE-DA17-4202-B870-42AA8A7C5F26} = {CB4E6D19-2AA1-47C9-A527-1D12D3392BC9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D0F4D02-5C15-48F4-ABEB-0D011759C871}
+	EndGlobalSection
+EndGlobal
