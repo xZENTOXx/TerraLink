@@ -8,7 +8,8 @@ namespace lib_dominio.Entidades
         public decimal Descuento { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
-        public bool  Estado { get; set; } = false;
+        public bool Estado { get; set; } = true;
+
 
     }
 }

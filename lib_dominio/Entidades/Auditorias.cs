@@ -1,7 +1,7 @@
 ﻿
 namespace lib_dominio.Entidades
 {
-    internal class Auditorias
+    public class Auditorias
     {
         public int Id { get; set; }
         public int Usuario { get; set; }
