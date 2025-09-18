@@ -7,13 +7,13 @@ using ut_presentacion.Nucleo;
 namespace ut_presentacion.Repositorios
 {
     [TestClass]
-    public class FincasPrueba
+    public class ReservaServiciosPrueba
     {
         private readonly IConexion iConexion;
-        private List<Fincas>? lista;
-        private Fincas? entidad;
+        private List<ReservaServicios>? lista;
+        private ReservaServicios? entidad;
 
-        public FincasPrueba()
+        public ReservaServiciosPrueba()
         {
             iConexion = new Conexion();
             iConexion.StringConexion = Configuracion.ObtenerValor("StringConexion");
@@ -30,22 +30,23 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.Fincas!.Take(20).ToList();
+            this.lista = this.iConexion!.ReservaServicios!.Take(20).ToList();
             return lista.Count > 0;
         }
 
         public bool Guardar()
         {
-            this.entidad = EntidadesNucleo.Fincas();
-            this.iConexion!.Fincas!.Add(this.entidad!);
+            // Reserva 1 y Servicio 1 existen por seeds
+            this.entidad = EntidadesNucleo.ReservaServicios(1, 1);
+            this.iConexion!.ReservaServicios!.Add(this.entidad!);
             this.iConexion!.SaveChanges();
             return this.entidad!.Id > 0;
         }
 
         public bool Modificar()
         {
-            this.entidad!.Descripcion = "Actualizada";
-            var entry = this.iConexion!.Entry<Fincas>(this.entidad!);
+            this.entidad!.Cantidad = 2;
+            var entry = this.iConexion!.Entry<ReservaServicios>(this.entidad!);
             entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
             return true;
@@ -53,7 +54,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Borrar()
         {
-            this.iConexion!.Fincas!.Remove(this.entidad!);
+            this.iConexion!.ReservaServicios!.Remove(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }

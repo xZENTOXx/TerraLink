@@ -199,7 +199,7 @@ INSERT INTO [Clientes] ([Nombre], [Apellido], [Correo], [Telefono], [Documento])
 ('Mariana','Lopez','mariana@example.com','3045556677','99012345');
 
 -- FINCAS
-INSERT INTO [Fincas] ([Nombre], [Ubicación], [Capacidad], [Descripción], [PrecioBase], [Estado]) VALUES
+INSERT INTO [Fincas] ([Nombre], [Ubicacion], [Capacidad], [Descripcion], [PrecioBase], [Estado]) VALUES
 ('Finca El Retiro','El Retiro - Antioquia',60,'Finca campestre con lago',180000.0000,1),
 ('Finca La Ceja','La Ceja - Antioquia',40,'Cabañas familiares',150000.0000,1),
 ('Finca Guatapé Vista','Guatapé - Antioquia',80,'Vista al embalse',250000.0000,1),
@@ -220,7 +220,7 @@ INSERT INTO [ServiciosExtras] ([Nombre], [Precio], [Estado]) VALUES
 ('Piscina Climatizada',80000,1),
 ('Kayak 1h',40000,1),
 ('Fogata Nocturna',30000,1),
-('Decoración Romántica',150000,1);
+('Decoracion Romántica',150000,1);
 
 -- PROMOCIONES
 INSERT INTO [Promociones] ([Nombre], [Descuento], [FechaInicio], [FechaFin], [Estado]) VALUES
@@ -230,7 +230,7 @@ INSERT INTO [Promociones] ([Nombre], [Descuento], [FechaInicio], [FechaFin], [Es
 ('Navidad',20.00,'2025-12-20','2025-12-27',1),
 ('Año Nuevo',18.00,'2025-12-28','2026-01-05',1);
 
-/* ============ OPERACIÓN ============ */
+/* ============ OPERACIoN ============ */
 
 -- INVENTARIOS  (usa Id de fincas 1..5)
 INSERT INTO [Inventarios] ([Finca], [Nombre], [Cantidad], [Estado]) VALUES
@@ -244,9 +244,9 @@ INSERT INTO [Inventarios] ([Finca], [Nombre], [Cantidad], [Estado]) VALUES
 INSERT INTO [Mantenimientos] ([Finca], [Descripcion], [Costo], [Fecha], [Responsable]) VALUES
 (1,'Mantenimiento piscina',500000,'2025-09-01','Mateo Ramirez'),
 (2,'Pintura cabañas',800000,'2025-08-15','Andres Guerra'),
-(3,'Revisión kayaks',200000,'2025-09-10','Mateo Ramirez'),
+(3,'Revision kayaks',200000,'2025-09-10','Mateo Ramirez'),
 (4,'Podado jardines',150000,'2025-09-05','Andres Guerra'),
-(5,'Revisión paneles solares',300000,'2025-09-12','Proveedor Solar');
+(5,'Revision paneles solares',300000,'2025-09-12','Proveedor Solar');
 
 -- RESERVAS (Finca y Cliente deben existir)
 INSERT INTO [Reservas] ([FechaInicio], [FechaFin], [Estado], [Total], [Finca], [Cliente]) VALUES
@@ -270,7 +270,7 @@ INSERT INTO [ReservaServicios] ([Reserva], [Servicio], [Cantidad]) VALUES
 (2,1,1),  -- Asado
 (2,2,1),  -- Piscina
 (3,2,2),  -- Piscina x2
-(5,5,1);  -- Decoración
+(5,5,1);  -- Decoracion
 
 -- RESERVAPROMOCIONES (Reserva y Promocion deben existir)
 INSERT INTO [ReservaPromociones] ([Reserva], [Promocion]) VALUES
